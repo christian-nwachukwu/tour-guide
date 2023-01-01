@@ -1,24 +1,30 @@
 import { Component } from "react";
 import "./Navbar.css";
 import { MenuItems } from "./MenuItems";
-import index from "@babel/traverse";
 
 class Navbar extends Component{
-    render(){
-        return(
+    state = { clicked: false }
+    render() {
+        return (
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Mocha-House</h1>
+                <h1 className="navbar-logo">Tour-Guide</h1>
+
+                <div className="menu-icon">
+                    <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
+                </div>
 
                 <ul className="nav-menu">
-                    {MenuItems.map((item, index) => {
-                        return(
-                            <li key={index}>
-                                <a href="/">
-                                    <i className={item.icon}></i>Home
+                {MenuItems.map( (item, index) => {
+                    return (
+                        <li key={index}>
+                                <a className={item.cName} href={item.url}>
+                                    <i className={item.nav}></i>{item.title}
                                 </a>
-                            </li>
-                        );
-                    })}    
+                        </li> 
+                    );
+                } )} 
+
+                <button>Sign Up</button> 
                 </ul>
             </nav>
         )
