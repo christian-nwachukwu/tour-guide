@@ -1,10 +1,17 @@
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import ServeImg from "../assets/de-Lourve-tour.jpg";
 
 function Service (){
     return(
         <>
             <Navbar />
-            <h1>Service</h1>
+            <Hero 
+                cName="hero-service"
+                heroImg={ServeImg}
+                title="Service"
+                btnClass="hind"
+            />
         </>
     )
 }
