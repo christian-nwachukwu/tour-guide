@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ServeImg from "../assets/de-Lourve-tour.jpg";
 import Footer from "../components/Footer";
+import Trip from "../components/Trip";
 
 function Service (){
     return(
@@ -13,6 +14,7 @@ function Service (){
                 title="Service"
                 btnClass="hind"
             />
+            <Trip />
             <Footer />
         </>
     )
